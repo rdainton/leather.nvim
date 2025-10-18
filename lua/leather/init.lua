@@ -1,4 +1,4 @@
---- Fiftyshades - A minimal, monochrome-focused colorscheme
+--- Leather - A minimal, Alabaster inspired, colorscheme
 ---
 --- Color Philosophy:
 ---   - bg_accent: Used for "selected/focused" UI elements (cursor line, status bar,
@@ -10,7 +10,7 @@
 ---     functions, and errors
 local M = {}
 
-local palette_module = require("fiftyshades.palette")
+local palette_module = require("leather.palette")
 local palette
 
 --- @class Highlight
@@ -25,8 +25,8 @@ local palette
 --- | "reverse"
 --- | "nocombine"
 
-local class_none = "FiftyShadesNone"
-local class_debug = "FiftyShadesDebug"
+local class_none = "LeatherNone"
+local class_debug = "LeatherDebug"
 
 --- Sets highlight group with foreground and background colors
 --- @param group string
@@ -328,7 +328,7 @@ function M.setup(opts)
 	-- Create palette with any semantic overrides
 	palette = palette_module.create_palette(opts.semantic)
 
-	M.init("fiftyshades")
+	M.init("leather")
 	M.base_syntax()
 	M.ui()
 	M.apply_links()

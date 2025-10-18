@@ -1,6 +1,6 @@
-# Fifty Shades
+# Leather theme 
 
-A minimalist Neovim colorscheme inspired by [Alabaster for Sublime Text](https://github.com/tonsky/sublime-scheme-alabaster). Features subtle syntax highlighting with colors only for comments, strings, constants, and functions - everything else remains greyscale.
+A minimalist Neovim colorscheme inspired by both the [Alabaster theme for Sublime](https://github.com/tonsky/sublime-scheme-alabaster) and the [Rubber theme for VSCode](https://github.com/apust/vscode-rubber-theme) - with a splash of [The Matrix](https://en.wikipedia.org/wiki/The_Matrix). Features subtle syntax highlighting with colors only for comments, strings, constants, and functions - everything else remains greyscale.
 
 ## Installation
 
@@ -8,9 +8,9 @@ Using [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "rdainton/fiftyshades",
+  "rdainton/leather.nvim",
   config = function()
-    require("fiftyshades").setup()
+    require("leather").setup()
   end,
 }
 ```
@@ -21,9 +21,9 @@ You can override the semantic colors (comments, strings, constants, functions, e
 
 ```lua
 {
-  "rdainton/fiftyshades",
+  "rdainton/leather.nvim",
   config = function()
-    require("fiftyshades").setup {
+    require("leather").setup {
       semantic = {
         comments = { gui = "#6A9955", cterm = 65 },    -- Custom green
         strings = { gui = "#CE9178", cterm = 173 },     -- Custom orange
@@ -39,10 +39,10 @@ You can override the semantic colors (comments, strings, constants, functions, e
 You can also use the built-in color helper:
 
 ```lua
-local fiftyshades = require("fiftyshades")
-local color = require("fiftyshades.palette").color
+local leather = require("leather")
+local color = require("leather.palette").color
 
-fiftyshades.setup({
+leather.setup({
   semantic = {
     comments = color("#6A9955", 65),
     strings = color("#CE9178", 173),
